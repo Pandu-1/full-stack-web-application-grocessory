@@ -15,7 +15,7 @@ const Cart = () => {
     getCartAmount,
     axios,
     user,
-    setCartItems,
+    setCartItems,   
   } = useAppContext();
   const [showAddress, setShowAddress] = useState(false);
   const [cartArray, setCartArray] = useState([]);
@@ -24,14 +24,19 @@ const Cart = () => {
   const [paymentOption, setPaymentOption] = useState("COD");
 
   const getCart = () => {
-    let tempArray = [];
-    for (const key in cartItems) {
-      const product = products.find((item) => item._id === key);
+  let tempArray = [];
+
+  for (const key in cartItems) {
+    const product = products.find((item) => item._id === key);
+
+    if (product) {
       product.quantity = cartItems[key];
       tempArray.push(product);
     }
-    setCartArray(tempArray);
-  };
+  }
+
+  setCartArray(tempArray);
+};
 
   // getUser Address
   const getUserAddress = async () => {
@@ -73,8 +78,7 @@ const Cart = () => {
         } else {
           toast.error(data.message);
         }
-      }
-      else{
+      } else {
         // place order with stripe
         const { data } = await axios.post("/api/order/stripe", {
           userId: user._id,
@@ -85,7 +89,7 @@ const Cart = () => {
           address: selectedAddress._id,
         });
         if (data.success) {
-          window.location.replace(data.url)
+          window.location.replace(data.url);
         } else {
           toast.error(data.message);
         }

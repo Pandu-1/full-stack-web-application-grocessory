@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { assets } from "../../../../greencart_assets/greencart_assets/assets";
+import { assets } from "../assets/assets";
 import {useAppContext} from "../context/AppContext"
 import toast from "react-hot-toast";
 
@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
       <NavLink to="/" onClick={()=>setOpen(false)}>
-        <img className="h-9" src={assets.logo} alt="LOGO" />
+        <img className="h-15 w-45" src={assets.logo2} alt="LOGO" />
       </NavLink>
 
       {/* Desktop Menu */}

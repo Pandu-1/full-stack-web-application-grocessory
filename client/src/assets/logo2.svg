@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="132" height="30" viewBox="0 0 1800 700" preserveAspectRatio="none" role="img" aria-label="GroceryGo logo">
+<defs>
+  <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#A4FF00"/>
+    <stop offset=".5" stop-color="#35C900"/>
+    <stop offset="1" stop-color="#007A48"/>
+  </linearGradient>
+  <linearGradient id="textGreen" x1="0" y1="0" x2="1" y2="0">
+    <stop stop-color="#075F3C"/>
+    <stop offset="1" stop-color="#00854A"/>
+  </linearGradient>
+</defs>
+
+<!-- Cart G icon -->
+<g transform="translate(55 125)">
+  <g fill="none" stroke="url(#green)" stroke-linecap="round">
+    <path d="M10 245h62" stroke-width="13"/>
+    <path d="M25 278h82" stroke-width="13"/>
+    <path d="M10 311h62" stroke-width="13"/>
+  </g>
+
+  <!-- leaves -->
+  <path d="M190 60C154 28 151-2 158-28c43 7 70 30 74 67-9 10-20 16-42 21Z" fill="url(#green)"/>
+  <path d="M235 65c16-42 47-59 82-54-8 35-29 57-61 65Z" fill="url(#green)"/>
+  <path d="M203 73c5-25-3-46-25-63M240 72c11-16 24-28 42-39" fill="none" stroke="#B8FF3D" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- cart shaped G -->
+  <path d="M225 82C126 82 82 149 82 241c0 98 59 160 153 160h169c31 0 51-23 59-50l27-89H365c-13 0-23 10-23 23s10 23 23 23h94l-17 43H235c-59 0-97-42-97-110 0-62 35-101 97-101h184c13 0 22-10 22-22s-9-22-22-22Z" fill="url(#green)"/>
+
+  <!-- basket -->
+  <path d="M226 238h210l-19 79H246Z" fill="url(#green)"/>
+
+  <!-- produce -->
+  <circle cx="310" cy="240" r="29" fill="#EF3D28"/>
+  <path d="M289 224c9-15 20-21 35-20" fill="none" stroke="#22A63B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M344 238c-5-27 4-44 24-57 14 23 8 42-7 57Z" fill="#F2C52B"/>
+  <path d="M242 240c-3-27 5-44 21-55 10 23 5 42-10 55Z" fill="#F28A22"/>
+  <path d="M273 235c-4-31 2-51 16-63 12 19 15 38 9 63Z" fill="#57C92D"/>
+  <path d="M318 235c-4-34 6-58 26-73 8 30-1 55-18 73Z" fill="#36B936"/>
+
+  <!-- wheels -->
+  <circle cx="260" cy="411" r="25" fill="#063D2B"/>
+  <circle cx="260" cy="411" r="9" fill="#E5F7D8"/>
+  <circle cx="365" cy="411" r="25" fill="#063D2B"/>
+  <circle cx="365" cy="411" r="9" fill="#E5F7D8"/>
+  <path d="M178 449c85-12 160-14 235-4-76 14-157 17-235 4Z" fill="url(#green)"/>
+</g>
+
+<!-- Separated wordmark: icon G is the first letter, so text starts with 'rocery' -->
+<g font-family="Arial, Helvetica, sans-serif" font-weight="800">
+  <text x="515" y="405" font-size="155" fill="url(#textGreen)" letter-spacing="5">rocery</text>
+  <text x="1125" y="405" font-size="155" fill="url(#green)" letter-spacing="3">Go</text>
+</g>
+
+<!-- speed lines -->
+<g stroke="url(#green)" stroke-linecap="round">
+  <path d="M1425 315h92" stroke-width="14"/>
+  <path d="M1442 348h75" stroke-width="14"/>
+  <path d="M1425 381h62" stroke-width="14"/>
+</g>
+
+<!-- underline -->
+<path d="M520 445c165-28 365-28 535-4-160 14-350 18-535 4Z" fill="url(#green)"/>
+</svg>

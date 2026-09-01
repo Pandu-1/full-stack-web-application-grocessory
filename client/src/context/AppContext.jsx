@@ -74,7 +74,6 @@ export const AppContextProvider = ({ children }) => {
     const updateCart = async () => {
       try {
         const { data } = await axios.post("/api/cart/update", {
-          
           cartItems,
         });
         if (!data.success) {
@@ -133,7 +132,7 @@ export const AppContextProvider = ({ children }) => {
     let totalAmount = 0;
     for (const items in cartItems) {
       let itemInfo = products.find((product) => product._id === items);
-      if (cartItems[items] > 0) {
+      if (cartItems[items] > 0 && itemInfo) {
         totalAmount += itemInfo.offerPrice * cartItems[items];
       }
     }
@@ -160,7 +159,7 @@ export const AppContextProvider = ({ children }) => {
     getCartAmount,
     axios,
     fetchProducts,
-    setCartItems
+    setCartItems,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
