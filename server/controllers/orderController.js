@@ -4,6 +4,9 @@ import Product from "../models/product.js"
 import stripe from "stripe"
 import User from "../models/User.js"
 
+// stripe Gateway Initialize
+    const stripeInstance = new stripe(process.env.STRIPE_SECRET_KEY)
+
 // Place Order COD : /api/order/cod
 export const placeOrderCOD = async(req,res)=>{
     try {
@@ -63,8 +66,7 @@ export const placeOrderStripe = async(req,res)=>{
             address,
             paymentType: "Online",
         });
-        // stripe Gateway Initialize
-        const stripeInstance = new stripe(process.env.STRIPE_SECRET_KEY)
+        
 
         // create line items for stripe
         const line_items = productData.map((item)=>{
