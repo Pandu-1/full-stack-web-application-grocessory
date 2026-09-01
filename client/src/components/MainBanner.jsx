@@ -1,5 +1,5 @@
 import React from 'react'
-import { assets } from '../../../../greencart_assets/greencart_assets/assets'
+import { assets } from "../assets/assets";
 import { Link } from 'react-router-dom'
 
 const MainBanner = () => {
